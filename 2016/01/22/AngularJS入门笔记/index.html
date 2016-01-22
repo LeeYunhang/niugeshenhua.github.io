@@ -12,7 +12,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/01/22/AngularJS入门笔记/index.html">
 <meta property="og:site_name" content="欢迎来到这里！">
 <meta property="og:description" content="AngularJS 入门笔记内容:AngularJS的介绍， AngularJS表达式， Angular指令的一些基础概念。先看一段代码12345678910111213141516&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;html ng-app&amp;gt;&amp;lt;head&amp;gt;&amp;lt;meta charset=&quot;utf-8&quot;&amp;gt;&amp;lt;!--引入AngularJS--&amp;gt;&amp;lt;s">
-<meta property="og:updated_time" content="2016-01-22T18:48:08.000Z">
+<meta property="og:updated_time" content="2016-01-22T19:13:12.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AngularJS入门笔记">
 <meta name="twitter:description" content="AngularJS 入门笔记内容:AngularJS的介绍， AngularJS表达式， Angular指令的一些基础概念。先看一段代码12345678910111213141516&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;html ng-app&amp;gt;&amp;lt;head&amp;gt;&amp;lt;meta charset=&quot;utf-8&quot;&amp;gt;&amp;lt;!--引入AngularJS--&amp;gt;&amp;lt;s">
@@ -257,7 +257,7 @@
 <p>4.AngularJS 表达式 与 JavaScript 表达式</p>
 <blockquote>
 <h5 id="u76F8_u540C_u70B9"><a href="#u76F8_u540C_u70B9" class="headerlink" title="相同点"></a>相同点</h5><ul>
-<li>类似于 JavaScript 表达式，AngularJS 表达式可以包含<strong>字母</strong>，<strong>操作符</strong>，<strong>变量</strong>。<br>#####不同点</li>
+<li>类似于 JavaScript 表达式，AngularJS 表达式可以包含<strong>字母</strong>，<strong>操作符</strong>，<strong>变量</strong>。<h5 id="u4E0D_u540C_u70B9"><a href="#u4E0D_u540C_u70B9" class="headerlink" title="不同点"></a>不同点</h5></li>
 <li>与 JavaScript 表达式不同，AngularJS 表达式可以写在 <strong>HTML</strong> 中。</li>
 <li>与 JavaScript 表达式不同，AngularJS 表达式不支持<strong>条件判断</strong>，<strong>循环</strong>及<strong>异常</strong></li>
 <li>与 JavaScript 表达式不同，AngularJS 表达式支持<strong>过滤器</strong>。</li>
@@ -288,29 +288,16 @@
 </blockquote>
 <p>&gt;</p>
 <blockquote>
-<p>7.创建自定义指令</p>
-<blockquote>
-<p>虽然指令是按ng-开头的html元素的属性，但是他不仅可以自定义，还可以用在很多地方。</p>
-<p><strong>创建一个custon-instruction指令</strong><br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="actionscript"></span><br><span class="line"> <span class="comment">//获得名为myApp的对象</span></span><br><span class="line"><span class="keyword">var</span> app = angular.module(<span class="string">"myApp"</span>, []);</span><br><span class="line"> <span class="comment">//自定义一个名为:custom-instruction的指令</span></span><br><span class="line">app.directive(<span class="string">"custom-instruction"</span>, <span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        template : <span class="string">"&lt;h1&gt;自定义指令!&lt;/h1&gt;"</span></span><br><span class="line">    &#125;;</span><br><span class="line">&#125;);</span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"> &gt;</span><br></pre></td></tr></table></figure></p>
-<p>你可以通过以下方式来调用指令：</p>
+<p>7.创建自定义指令<br>虽然指令是按ng-开头的html元素的属性，但是他不仅可以自定义，还可以用在很多地方。</p>
+<p><strong>创建一个custom-instruction指令</strong><br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="actionscript"></span><br><span class="line"> <span class="comment">//获得名为myApp的对象</span></span><br><span class="line"><span class="keyword">var</span> app = angular.module(<span class="string">"myApp"</span>, []);</span><br><span class="line"> <span class="comment">//自定义一个名为:custom-instruction的指令</span></span><br><span class="line">app.directive(<span class="string">"custom-instruction"</span>, <span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        template : <span class="string">"&lt;h1&gt;自定义指令!&lt;/h1&gt;"</span></span><br><span class="line">    &#125;;</span><br><span class="line">&#125;);</span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>你可以通过以下方式来调用指令:</p>
 <ul>
-<li>元素名(Element)<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#62; * &#23646;&#24615;(Attribute)&#10;&#62; ```&#60;div custon-instruction&#62;&#60;/div&#62;</span><br></pre></td></tr></table></figure>
-</li>
+<li>元素名(Element)<br><code>&lt;custom-instruction&gt;&lt;/custom-instruction&gt;</code></li>
+<li>属性(Attribute)<br><code>&lt;div custom-instruction&gt;&lt;/div&gt;</code></li>
+<li>类名(Class)<br><code>&lt;div class=&quot;custom-instruction&quot;&gt;&lt;/div&gt;</code></li>
+<li>注释(comMent)<br><code>&lt;!-- 指令: custom-instruction --&gt;</code></li>
 </ul>
-</blockquote>
-<ul>
-<li>类名(Class)<figure class="highlight"><figcaption><span>class="custon-instruction">```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#62; * &#27880;&#37322;(comMent)&#10;&#62; ```&#60;!-- &#25351;&#20196;: custon-instruction --&#62;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</blockquote>
-<p>&gt;</p>
-<blockquote>
-<blockquote>
-<p>你可以限制你的指令只能通过特定的方式来调用。<br><strong>示例代码</strong>:<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"> <span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="handlebars"><span class="xml"></span><br><span class="line"> var app = angular.module("myApp", []);</span><br><span class="line">app.directive("runoobDirective", function() &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">        restrict : "AE", <span class="comment">&lt;!--指令只能在Attribute和Element下使用--&gt;</span></span><br><span class="line">        template : "<span class="tag">&lt;<span class="title">h1</span>&gt;</span>自定义指令!<span class="tag">&lt;/<span class="title">h1</span>&gt;</span>"</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;);</span><br><span class="line"></span></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-</blockquote>
-<p>&gt;</p>
-<blockquote>
+<p>你可以限制你的指令只能通过特定的方式来调用。<br><strong>示例代码</strong>:<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"> <span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="handlebars"><span class="xml"></span><br><span class="line"> var app = angular.module("myApp", []);</span><br><span class="line">app.directive("custom-instruction", function() &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">        restrict : "AE", <span class="comment">&lt;!--指令只能在Attribute和Element下使用--&gt;</span></span><br><span class="line">        template : "<span class="tag">&lt;<span class="title">h1</span>&gt;</span>自定义指令!<span class="tag">&lt;/<span class="title">h1</span>&gt;</span>"</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;);</span><br><span class="line"></span></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure></p>
 <p>完整的指令内容可以参阅<a href="http://www.runoob.com/angularjs/angularjs-reference.html" target="_blank" rel="external">AngularJS参考手册</a></p>
 </blockquote>
 
