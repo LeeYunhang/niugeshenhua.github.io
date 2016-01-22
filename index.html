@@ -284,14 +284,14 @@
 <p><strong>创建一个custon-instruction指令</strong><br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="actionscript"></span><br><span class="line"> <span class="comment">//获得名为myApp的对象</span></span><br><span class="line"><span class="keyword">var</span> app = angular.module(<span class="string">"myApp"</span>, []);</span><br><span class="line"> <span class="comment">//自定义一个名为:custom-instruction的指令</span></span><br><span class="line">app.directive(<span class="string">"custom-instruction"</span>, <span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        template : <span class="string">"&lt;h1&gt;自定义指令!&lt;/h1&gt;"</span></span><br><span class="line">    &#125;;</span><br><span class="line">&#125;);</span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"> &gt;</span><br></pre></td></tr></table></figure></p>
 <p>你可以通过以下方式来调用指令：</p>
 <ul>
-<li><p>元素名(Element)</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#62;&#62; * &#23646;&#24615;(Attribute)&#10;&#62; ```&#60;div custon-instruction&#62;&#60;/div&#62;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>类名(Class)</p>
-<figure class="highlight"><figcaption><span>class="custon-instruction">```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#62;&#62; * &#27880;&#37322;(comMent)&#10;&#62; ```&#60;!-- &#25351;&#20196;: custon-instruction --&#62;</span><br></pre></td></tr></table></figure>
+<li>元素名(Element)<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#62; * &#23646;&#24615;(Attribute)&#10;&#62; ```&#60;div custon-instruction&#62;&#60;/div&#62;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </blockquote>
+<ul>
+<li>类名(Class)<figure class="highlight"><figcaption><span>class="custon-instruction">```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#62; * &#27880;&#37322;(comMent)&#10;&#62; ```&#60;!-- &#25351;&#20196;: custon-instruction --&#62;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 </blockquote>
 <p>&gt;</p>
 <blockquote>
