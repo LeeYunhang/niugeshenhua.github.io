@@ -33,7 +33,8 @@ left,right,n">
 <meta property="og:image" content="http://yoursite.com/./7.png">
 <meta property="og:image" content="http://yoursite.com/./8.png">
 <meta property="og:image" content="http://yoursite.com/./9.png">
-<meta property="og:updated_time" content="2016-04-25T07:14:14.911Z">
+<meta property="og:image" content="http://yoursite.com/./10.png">
+<meta property="og:updated_time" content="2016-04-25T09:56:46.758Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS后花园之浮动的秘密">
 <meta name="twitter:description" content="CSS后花园之浮动的秘密
@@ -127,7 +128,7 @@ left,right,n">
 					<nav class="header-nav">
 						<div class="social">
 							
-								<a class="github" target="_blank" href="/github.com/niugeshenhua" title="github">github</a>
+								<a class="github" target="_blank" href="/www.github.com/niugeshenhua" title="github">github</a>
 					        
 								<a class="weibo" target="_blank" href="/#" title="weibo">weibo</a>
 					        
@@ -204,7 +205,7 @@ left,right,n">
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="github" target="_blank" href="/github.com/niugeshenhua" title="github">github</a>
+						<a class="github" target="_blank" href="/www.github.com/niugeshenhua" title="github">github</a>
 			        
 						<a class="weibo" target="_blank" href="/#" title="weibo">weibo</a>
 			        
@@ -401,6 +402,7 @@ left,right,n">
 <p>先解释一下clear:left;的意义, 当你为元素A设定这条样式规则的时候，就好像在告诉游览器:禁止元素A的左边有浮动元素。虽然这种表述非常的不严谨，但是博主觉得这样去理解清除浮动是最好的方式！<br>看一下清除浮动的效果:</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">div</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">float</span>:<span class="value"> left</span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">200px</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">200px</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">border</span>:<span class="value"> solid <span class="number">1px</span> red</span></span>;</span><br><span class="line">&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="class">.second</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">clear</span>:<span class="value"> left</span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"first"</span>&gt;</span></span><br><span class="line">本来我的右边应该有second的，但是由于它不准它的左边有我，但是我必须遵守我的摆放的六大规则，所以second只好放到我下面去了。</span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"second"</span>&gt;</span></span><br><span class="line">我通过设置clear:left来禁止我的左边出现浮动元素(比如说first), 这相当于在原来摆放的六大规则上新增了一条规则，变成了非常6+1，因此我只能跑到first下面去。</span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><img src="./10.png" alt=""></p>
 <p>图10</p>
 <p>可以看到, 使用clear的元素其实相当于给自己新增了一条摆放规则，但是不会影响到之前的元素。<br>设置clear:both 相当于同时设置clear:left和clear:right</p>
 <h5 id="u597D_u4E86__u5173_u4E8E_u6D6E_u52A8_u7684_u5185_u5BB9_u5C31_u4ECB_u7ECD_u5230_u8FD9_u91CC_u4E86_2C_CSS_u5176_u5B9E_u662F_u4E00_u4E2A_u5F88_u6DF1_u7684_u5751_u3002_u672C_u6587_u662F_u535A_u4E3B_u7B2C_u4E00_u6B21_u5199_u535A_u6587_uFF0C_u5982_u679C_u4F60_u6709_u4EC0_u4E48_u5EFA_u8BAE_u6216_u8005_u9519_u8BEF_uFF0C_u6B22_u8FCE_u5728_u8BC4_u8BBA_u91CC_u6307_u51FA_uFF0C_u8BA9_u6211_u66F4_u6709_u52A8_u529B_u5199_u51FA_u66F4_u597D_u7684_u6587_u7AE0_uFF01"><a href="#u597D_u4E86__u5173_u4E8E_u6D6E_u52A8_u7684_u5185_u5BB9_u5C31_u4ECB_u7ECD_u5230_u8FD9_u91CC_u4E86_2C_CSS_u5176_u5B9E_u662F_u4E00_u4E2A_u5F88_u6DF1_u7684_u5751_u3002_u672C_u6587_u662F_u535A_u4E3B_u7B2C_u4E00_u6B21_u5199_u535A_u6587_uFF0C_u5982_u679C_u4F60_u6709_u4EC0_u4E48_u5EFA_u8BAE_u6216_u8005_u9519_u8BEF_uFF0C_u6B22_u8FCE_u5728_u8BC4_u8BBA_u91CC_u6307_u51FA_uFF0C_u8BA9_u6211_u66F4_u6709_u52A8_u529B_u5199_u51FA_u66F4_u597D_u7684_u6587_u7AE0_uFF01" class="headerlink" title="好了 关于浮动的内容就介绍到这里了, CSS其实是一个很深的坑。本文是博主第一次写博文，如果你有什么建议或者错误，欢迎在评论里指出，让我更有动力写出更好的文章！"></a>好了 关于浮动的内容就介绍到这里了, CSS其实是一个很深的坑。本文是博主第一次写博文，如果你有什么建议或者错误，欢迎在评论里指出，让我更有动力写出更好的文章！</h5><p>这是我的个人主页 <a href="www.mrcodex.com">Mr-code</a></p>
